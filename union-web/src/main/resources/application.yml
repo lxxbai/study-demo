@@ -1,0 +1,21 @@
+server:
+  port: 21101
+
+spring:
+  application:
+    name: union-web
+  main:
+    # 允许循环引用
+    allow-circular-references: true
+    # 允许bean覆盖
+    allow-bean-definition-overriding: true
+  profiles:
+    active: @profileActive@
+  ## 文件大小设置
+  servlet:
+    multipart:
+      maxFileSize: 500MB
+      maxRequestSize: 1GB
+logging:
+  level:
+    com.xxbai.study.union.web: info
